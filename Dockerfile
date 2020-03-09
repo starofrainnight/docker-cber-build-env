@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
     subversion \
     subversion-tools \
     git-all \
+    cmake \
+    cmake-curses-gui \
     && apt-get clean
 
 RUN cd /tmp && wget -c http://ftp.gnu.org/gnu/bison/bison-3.5.2.tar.xz

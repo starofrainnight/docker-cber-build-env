@@ -33,6 +33,5 @@ ADD files/grun /usr/local/bin/
 ADD files/antlr4 /usr/local/bin/
 RUN chmod +x /usr/local/bin/grun /usr/local/bin/antlr4
 RUN cd /tmp && wget https://www.antlr.org/download/antlr-4.8-complete.jar && mv antlr-4.8-complete.jar /usr/local/lib/
-RUN cd /tmp && git clone --depth=1 https://github.com/antlr/antlr4.git && cd antlr4 && cd ./antlr4/runtime/Cpp && cmake . && make && make install
+RUN cd /tmp && git clone --depth=1 https://github.com/antlr/antlr4.git && cd ./antlr4/runtime/Cpp && cmake . && make && make install
 RUN rm -rf /tmp/antlr4
-

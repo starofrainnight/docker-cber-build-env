@@ -22,7 +22,8 @@ RUN apt-get update && apt-get install -y \
     cmake \
     cmake-curses-gui \
     openjdk-11-jdk \
-    && apt-get clean
+    libclang-dev llvm-dev llvm-runtime \
+    && apt-get -y autoremove && apt-get clean
 
 RUN cd /tmp && wget -c http://ftp.gnu.org/gnu/bison/bison-3.5.2.tar.xz
 RUN cd /tmp && tar xvf bison-3.5.2.tar.xz
